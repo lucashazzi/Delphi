@@ -1,0 +1,692 @@
+object FormAutores: TFormAutores
+  Left = 0
+  Top = 0
+  Caption = 'Gest'#227'o de Autores e Livros'
+  ClientHeight = 519
+  ClientWidth = 789
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnActivate = FormActivate
+  OnClose = FormClose
+  OnDeactivate = FormDeactivate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object edtNomeAutor: TEdit
+    Left = 17
+    Top = 28
+    Width = 247
+    Height = 21
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 8
+    Top = 107
+    Width = 317
+    Height = 50
+    TabOrder = 2
+    object btnIncluir: TSpeedButton
+      Left = 10
+      Top = 7
+      Width = 66
+      Height = 33
+      Caption = 'Incluir'
+      OnClick = btnIncluirClick
+    end
+    object btnAlterar: TSpeedButton
+      Left = 82
+      Top = 8
+      Width = 66
+      Height = 33
+      Caption = 'Alterar'
+      OnClick = btnAlterarClick
+    end
+    object btnExcluir: TSpeedButton
+      Left = 154
+      Top = 8
+      Width = 66
+      Height = 33
+      Caption = 'Excluir'
+      OnClick = btnExcluirClick
+    end
+    object Panel2: TPanel
+      Left = 228
+      Top = 1
+      Width = 88
+      Height = 48
+      TabOrder = 0
+      object btnAnterior: TSpeedButton
+        Left = 8
+        Top = 8
+        Width = 33
+        Height = 33
+        Glyph.Data = {
+          060A0000424D060A000000000000420000002800000019000000190000000100
+          200003000000C4090000130B0000130B000000000000000000000000FF0000FF
+          0000FF0000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000080000000800000008000000080000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0045000000610000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000FF000000FF000000FF000000FF0000
+          00000000000000000000000000000000000000000000000000000000000F0000
+          009A000000FE0000008000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000000000FF000000FF000000FF0000
+          00FF0000000000000000000000000000000000000000000000000000004F0000
+          00E3000000FF000000FF00000080000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000000000FF000000FF0000
+          00FF000000FF0000000000000000000000000000000000000015000000A50000
+          00FF000000FF000000FF000000FF000000800000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000FF0000
+          00FF000000FF000000FF00000000000000000000000000000056000000EB0000
+          00FF000000FF000000FF000000FF000000FF0000008000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00FF000000FF000000FF000000FF000000000000001A000000B3000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF00000080000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000FF000000FF000000FF000000FF00000065000000EF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000800000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          0080000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000800000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF0000008000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000000000FF000000FF000000FF0000
+          00FF00000065000000EF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF00000080000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000000000FF000000FF0000
+          00FF000000FF000000000000001A000000B3000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000800000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000FF0000
+          00FF000000FF000000FF00000000000000000000000000000057000000EB0000
+          00FF000000FF000000FF000000FF000000FF0000008000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00FF000000FF000000FF000000FF000000000000000000000000000000000000
+          0015000000A5000000FF000000FF000000FF000000FF00000080000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000FF000000FF000000FF000000FF0000000000000000000000000000
+          000000000000000000000000004F000000E5000000FF000000FF000000800000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000FF000000FF000000FF000000FF00000000000000000000
+          0000000000000000000000000000000000000000000F0000009A000000FE0000
+          0080000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000080000000800000008000000080000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0045000000610000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000}
+        OnClick = btnAnteriorClick
+      end
+      object btnProximo: TSpeedButton
+        Left = 48
+        Top = 8
+        Width = 33
+        Height = 33
+        Glyph.Data = {
+          060A0000424D060A000000000000420000002800000019000000190000000100
+          200003000000C4090000130B0000130B000000000000000000000000FF0000FF
+          0000FF0000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000061000000490000000000000000000000000000
+          0000000000000000000000000000000000000000000000000080000000800000
+          0080000000800000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000080000000FF000000A1000000110000
+          0000000000000000000000000000000000000000000000000000000000FF0000
+          00FF000000FF000000FF00000000000000000000000000000000000000000000
+          00000000000000000000000000000000000000000080000000FF000000FF0000
+          00EA000000530000000000000000000000000000000000000000000000000000
+          00FF000000FF000000FF000000FF000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000080000000FF0000
+          00FF000000FF000000FF000000AB0000001A0000000000000000000000000000
+          0000000000FF000000FF000000FF000000FF0000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000800000
+          00FF000000FF000000FF000000FF000000FF000000ED0000005D000000000000
+          000000000000000000FF000000FF000000FF000000FF00000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0080000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00B70000001F00000000000000FF000000FF000000FF000000FF000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000080000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000F100000066000000FF000000FF000000FF000000FF0000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000080000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000080000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF0000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000080000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF00000000000000000000000000000000000000000000
+          00000000000000000000000000000000000000000080000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000F1000000660000
+          00FF000000FF000000FF000000FF000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000080000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000B70000001F0000
+          0000000000FF000000FF000000FF000000FF0000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000800000
+          00FF000000FF000000FF000000FF000000FF000000ED0000005D000000000000
+          000000000000000000FF000000FF000000FF000000FF00000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0080000000FF000000FF000000FF000000FF000000AB0000001A000000000000
+          00000000000000000000000000FF000000FF000000FF000000FF000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000080000000FF000000FF000000EA0000005300000000000000000000
+          0000000000000000000000000000000000FF000000FF000000FF000000FF0000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000080000000FF000000A10000001100000000000000000000
+          000000000000000000000000000000000000000000FF000000FF000000FF0000
+          00FF000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000061000000490000000000000000000000000000
+          0000000000000000000000000000000000000000000000000080000000800000
+          0080000000800000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000}
+        OnClick = btnProximoClick
+      end
+    end
+  end
+  object Panel3: TPanel
+    Left = 216
+    Top = 354
+    Width = 233
+    Height = 43
+    TabOrder = 3
+    object btnCancelar: TButton
+      Left = 155
+      Top = 7
+      Width = 67
+      Height = 32
+      Caption = 'Cancelar'
+      Enabled = False
+      TabOrder = 0
+      OnClick = btnCancelarClick
+    end
+    object btnSalvar: TButton
+      Left = 82
+      Top = 7
+      Width = 67
+      Height = 32
+      Caption = 'Salvar'
+      Enabled = False
+      TabOrder = 1
+      OnClick = btnSalvarClick
+    end
+    object btnRelatorio: TButton
+      Left = 8
+      Top = 7
+      Width = 67
+      Height = 32
+      Caption = 'Relat'#243'rio'
+      TabOrder = 2
+      OnClick = btnRelatorioClick
+    end
+  end
+  object StaticText2: TStaticText
+    Left = 17
+    Top = 5
+    Width = 90
+    Height = 19
+    Caption = 'Nome do Autor'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Roboto'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+  end
+  object txtData: TStaticText
+    Left = 17
+    Top = 55
+    Width = 101
+    Height = 19
+    Caption = 'Data de Registro'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Roboto'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
+  end
+  object txtHora: TStaticText
+    Left = 152
+    Top = 55
+    Width = 101
+    Height = 19
+    Caption = 'Hora de Registro'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Roboto'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 6
+  end
+  object edtDataLog: TMaskEdit
+    Left = 18
+    Top = 80
+    Width = 65
+    Height = 21
+    EditMask = '99/99/9999'
+    MaxLength = 10
+    ReadOnly = True
+    TabOrder = 1
+    Text = '  /  /    '
+  end
+  object ConnInfo: TStaticText
+    Left = 8
+    Top = 385
+    Width = 49
+    Height = 17
+    Caption = 'ConnInfo'
+    TabOrder = 7
+  end
+  object edtHoraLog: TMaskEdit
+    Left = 152
+    Top = 80
+    Width = 51
+    Height = 21
+    EditMask = '99:99:99'
+    MaxLength = 8
+    ReadOnly = True
+    TabOrder = 8
+    Text = '  :  :  '
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 156
+    Width = 441
+    Height = 201
+    DataSource = DataModule1.DataSourceAutores
+    ReadOnly = True
+    TabOrder = 9
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object ScrollBox1: TScrollBox
+    Left = 457
+    Top = 8
+    Width = 324
+    Height = 389
+    TabOrder = 10
+    object PnlLivro: TPanel
+      Left = 0
+      Top = 0
+      Width = 320
+      Height = 64
+      Align = alTop
+      TabOrder = 0
+      object btnPAlterar: TButton
+        Left = 163
+        Top = 37
+        Width = 75
+        Height = 25
+        Caption = 'Alterar'
+        Enabled = False
+        TabOrder = 0
+      end
+      object btnPExcluir: TButton
+        Left = 241
+        Top = 37
+        Width = 75
+        Height = 25
+        Caption = 'Excluir'
+        Enabled = False
+        TabOrder = 1
+      end
+      object edtPNomeLivro: TEdit
+        Left = 8
+        Top = 6
+        Width = 161
+        Height = 21
+        ReadOnly = True
+        TabOrder = 2
+      end
+    end
+  end
+  object btnLoadLivros: TButton
+    Left = 323
+    Top = 107
+    Width = 128
+    Height = 50
+    Caption = 'Carregar Livros'
+    TabOrder = 11
+    OnClick = btnLoadLivrosClick
+  end
+  object edtIdAutor: TEdit
+    Left = 315
+    Top = 28
+    Width = 33
+    Height = 21
+    TabOrder = 12
+    Text = 'ID'
+    Visible = False
+  end
+  object rlReport: TRLReport
+    Left = 18
+    Top = -5
+    Width = 794
+    Height = 1123
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Roboto'
+    Font.Style = []
+    Visible = False
+    OnNeedData = rlReportNeedData
+    OnPageEnding = rlReportPageEnding
+    OnPageStarting = rlReportPageStarting
+    object bndHeader: TRLBand
+      Left = 38
+      Top = 38
+      Width = 718
+      Height = 64
+      BandType = btHeader
+      Borders.Sides = sdCustom
+      Borders.DrawLeft = False
+      Borders.DrawTop = False
+      Borders.DrawRight = False
+      Borders.DrawBottom = False
+      Transparent = False
+      object RLLabel1: TRLLabel
+        Left = 1
+        Top = 1
+        Width = 319
+        Height = 40
+        Caption = 'Rela'#231#227'o de Editoras e Livros'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -27
+        Font.Name = 'Calibri'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object RLDraw1: TRLDraw
+        Left = 4
+        Top = 36
+        Width = 373
+        Height = 23
+        DrawHeight = 6
+        DrawKind = dkLine
+        DrawWidth = 0
+      end
+    end
+    object bndEspaco: TRLBand
+      Left = 38
+      Top = 142
+      Width = 718
+      Height = 19
+      Borders.Sides = sdCustom
+      Borders.DrawLeft = True
+      Borders.DrawTop = True
+      Borders.DrawRight = True
+      Borders.DrawBottom = False
+    end
+    object bndFooter: TRLBand
+      Left = 38
+      Top = 161
+      Width = 718
+      Height = 20
+      BandType = btFooter
+      object RLSystemInfo1: TRLSystemInfo
+        Left = 607
+        Top = 0
+        Width = 111
+        Height = 20
+        Align = faRight
+        Info = itLastPageNumber
+        Text = ''
+      end
+      object RLSystemInfo2: TRLSystemInfo
+        Left = 513
+        Top = 0
+        Width = 86
+        Height = 20
+        Align = faRight
+        Alignment = taRightJustify
+        Info = itPageNumber
+        Text = ''
+      end
+      object RLLabel2: TRLLabel
+        Left = 599
+        Top = 0
+        Width = 8
+        Height = 20
+        Align = faRight
+        Alignment = taJustify
+        Caption = '/'
+      end
+      object RLSystemInfo3: TRLSystemInfo
+        Left = 0
+        Top = 0
+        Width = 513
+        Height = 20
+        Align = faClient
+        Info = itFullDate
+        Text = ''
+      end
+    end
+    object bndDados: TRLBand
+      Left = 38
+      Top = 122
+      Width = 718
+      Height = 20
+      Borders.Sides = sdCustom
+      Borders.DrawLeft = False
+      Borders.DrawTop = False
+      Borders.DrawRight = False
+      Borders.DrawBottom = False
+      object rlblDescricao: TRLLabel
+        Left = 38
+        Top = 0
+        Width = 340
+        Height = 20
+        Align = faClient
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = True
+        Borders.DrawTop = False
+        Borders.DrawRight = False
+        Borders.DrawBottom = True
+        Caption = 'Livro'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Roboto'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+        BeforePrint = rlblDescricaoBeforePrint
+      end
+      object rlblIdLivro: TRLLabel
+        Left = 0
+        Top = 0
+        Width = 38
+        Height = 20
+        Align = faLeft
+        Alignment = taRightJustify
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = True
+        Borders.DrawTop = False
+        Borders.DrawRight = False
+        Borders.DrawBottom = True
+        Caption = '1'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Roboto'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+      object rlblAutor: TRLLabel
+        Left = 378
+        Top = 0
+        Width = 340
+        Height = 20
+        Align = faClient
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = True
+        Borders.DrawTop = False
+        Borders.DrawRight = True
+        Borders.DrawBottom = True
+        Borders.FixedBottom = True
+        Caption = 'Autor'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Roboto'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+    end
+    object bndHeaderDados: TRLBand
+      Left = 38
+      Top = 102
+      Width = 718
+      Height = 20
+      BandType = btHeader
+      Borders.Sides = sdCustom
+      Borders.DrawLeft = False
+      Borders.DrawTop = False
+      Borders.DrawRight = False
+      Borders.DrawBottom = False
+      Visible = False
+      object RLLabel3: TRLLabel
+        Left = 0
+        Top = 0
+        Width = 38
+        Height = 20
+        Align = faLeft
+        Alignment = taRightJustify
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = True
+        Borders.DrawTop = True
+        Borders.DrawRight = True
+        Borders.DrawBottom = True
+        Caption = 'ID'
+        Color = clSkyBlue
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Roboto Bk'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+      object RLLabel4: TRLLabel
+        Left = 38
+        Top = 0
+        Width = 340
+        Height = 20
+        Align = faClient
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = True
+        Borders.DrawTop = True
+        Borders.DrawRight = True
+        Borders.DrawBottom = True
+        Caption = 'Nome do Livro'
+        Color = clSkyBlue
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Roboto Bk'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+      object RLLabel5: TRLLabel
+        Left = 378
+        Top = 0
+        Width = 340
+        Height = 20
+        Align = faClient
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = True
+        Borders.DrawTop = True
+        Borders.DrawRight = True
+        Borders.DrawBottom = True
+        Caption = 'Autor'
+        Color = clSkyBlue
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Roboto Bk'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+    end
+  end
+end

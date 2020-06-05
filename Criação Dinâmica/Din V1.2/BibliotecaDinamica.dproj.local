@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/06/03 13:38:46.000.197,=C:\Users\lucas\Delphi\Criação Dinâmica\Din V1.1\Unit1.pas</Transaction>
+    <Transaction>2020/06/03 13:38:55.000.426,C:\Users\lucas\Delphi\Criação Dinâmica\Din V1.1\uRelatorio.pas=C:\Users\lucas\Delphi\Criação Dinâmica\Din V1.1\Unit1.pas</Transaction>
+    <Transaction>2020/06/03 13:38:55.000.426,C:\Users\lucas\Delphi\Criação Dinâmica\Din V1.1\uRelatorio.dfm=C:\Users\lucas\Delphi\Criação Dinâmica\Din V1.1\Unit1.dfm</Transaction>
+    <Transaction>2020/06/04 15:31:25.000.088,C:\Users\lucas\Delphi\Criação Dinâmica\Din V1.1\uRelatorio.pas=</Transaction>
+  </Transactions>
+</BorlandProject>

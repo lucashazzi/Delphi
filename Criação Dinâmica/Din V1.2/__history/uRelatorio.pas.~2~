@@ -1,0 +1,55 @@
+unit uRelatorio;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, RLReport, FireDAC.Comp.Client;
+
+type
+  TFormRelatorio = class(TForm)
+    RLReport: TRLReport;
+    bndHeader: TRLBand;
+    RLLabel1: TRLLabel;
+    bndHeaderDados: TRLBand;
+    lblEditora: TRLLabel;
+    bndEspaco: TRLBand;
+    bndFooter: TRLBand;
+    RLSystemInfo1: TRLSystemInfo;
+    RLSystemInfo2: TRLSystemInfo;
+    RLLabel2: TRLLabel;
+    bndDados: TRLBand;
+    RLSystemInfo3: TRLSystemInfo;
+    rltxtDescLivro: TRLDBText;
+  private
+    FQryRelatorio: TFDQuery;
+    check: Boolean;
+  public
+    procedure ImprimirRelatorio();
+    constructor Create(AOwner: TComponent; ADataSet: TFDQuery); overload;
+  end;
+
+var
+  FormRelatorio: TFormRelatorio;
+
+implementation
+
+{$R *.dfm}
+
+uses uDataModule;
+
+constructor TFormRelatorio.Create(AOwner: TComponent; ADataSet: TFDQuery);
+begin
+  Inherited Create(AOwner);
+    Self.FQryRelatorio := ADataSet;
+end;
+
+procedure TFormRelatorio.ImprimirRelatorio;
+begin
+check := True;
+RLReport.PreviewModal;
+end;
+
+
+end.
